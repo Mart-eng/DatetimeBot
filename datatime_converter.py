@@ -1,15 +1,18 @@
 # datetime_converter.py
 # This program is meant to post multiple timezones with the input of one
 
-import datetime, time
+import pytz, datetime
 
-time.strftime("%a, %d %b %Y %H:%M:%S +0000",time.gmtime() )
-def timeca():
+
+def timecall():
     print("Time in EST:")
 
-    est = time.gmtime()
-    print(est)
+    est = datetime.datetime.now(pytz.timezone('US/Eastern'))
+    print(1,est.tzinfo)
+    print(2,est)
+
+    
     
 
 
-timeca()
+timecall()
